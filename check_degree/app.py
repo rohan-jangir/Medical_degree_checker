@@ -177,7 +177,26 @@ medical_data = [
     "Medical genetics counseling",
     "Health promotion",
     "Pediatric cardiology",
-    "Neonatology"
+    "Neonatology",
+    "MBBS",
+    "MD",
+    "DO",
+    "PhD",
+    "MSc",
+    "BSc",
+    "BPharm",
+    "MPharm",
+    "DPharm",
+    "DPT",
+    "DDS",
+    "DMD",
+    "MPH",
+    "MHA",
+    "RN",
+    "CRNA",
+    "NP",
+    "LPN",
+    "CNA"
 ]
 
 def preprocess_image(image):
@@ -216,10 +235,7 @@ def upload_image():
         text = extract_text(processed_image)
         found_keywords = find_keywords(text, medical_data)
 
-        if not found_keywords:
-            return jsonify('Your degree is not related to our requirements.'), 404
-        else:
-            return jsonify('Your degree is related to the medical field.'), 200
+        return jsonify(bool(found_keywords)), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
