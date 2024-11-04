@@ -12,8 +12,8 @@ Follow these steps to set up and run the application locally:
 
 **1. Clone the Repository:**
 ```Bash
-git clone https://github.com/yourusername/medical-ocr-keyword-app.git
-cd medical-ocr-keyword-app
+git clone https://github.com/rohan-jangir/Medical_degree_checker/tree/main
+
 ```
 **2. Create a Virtual Environment (Optional but Recommended):**
 ```bash
